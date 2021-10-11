@@ -15,14 +15,6 @@ Install _fastlane_ using
 or alternatively using `brew install fastlane`
 
 # Available Actions
-### create_app
-```
-fastlane create_app
-```
-Create app on developer portal
-
-----
-
 ## iOS
 ### ios signing
 ```

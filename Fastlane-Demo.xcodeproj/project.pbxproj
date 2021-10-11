@@ -381,7 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5KGVXR8S2Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -396,6 +396,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "awsalex.com.Fastlane-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "awsalex.com.Fastlane-Demo";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

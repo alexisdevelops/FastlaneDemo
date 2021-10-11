@@ -1,7 +1,7 @@
-desc "Create app on developer portal"
-lane :create_app do
-  create_app_online #produce
-end
+# desc "Create app on developer portal"
+# lane :create_app do
+#   create_app_online #produce
+# end
 
 default_platform(:ios)
 
@@ -18,7 +18,9 @@ platform :ios do
       SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING
     ]
     update_code_signing_settings(
-      profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+      use_automatic_signing: false,
+      path: ENV["PROJECT_PATH"],
+      profile_name: ENV['MATCH_APP_IDENTIFIER']
     )
   end
 
@@ -34,3 +36,8 @@ platform :ios do
   end
 
 end
+
+# bundle exec fastlane match nuke 
+
+# [!] Please run `fastlane match nuke [type], allowed values: development, distribution and enterprise. For the 'adhoc' type, please use 'distribution' instead.
+# @Mew2king
