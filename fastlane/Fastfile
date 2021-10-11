@@ -1,0 +1,26 @@
+desc "Create app on developer portal"
+lane :create_app do
+  create_app_online #produce
+end
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Signing process"
+  lane :signing do
+    sync_code_signing #match
+  end
+
+  desc "Build binary"
+  lane :build do
+    signing
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+
+  desc "Release binary"
+  lane :release do
+    build
+  end
+
+end

@@ -10,6 +10,7 @@
 		5EF81F76270FCE14007471DB /* Fastlane_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF81F6C270FCE14007471DB /* Fastlane_Demo.framework */; };
 		5EF81F7B270FCE14007471DB /* Fastlane_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF81F7A270FCE14007471DB /* Fastlane_DemoTests.swift */; };
 		5EF81F7D270FCE14007471DB /* Fastlane_Demo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF81F6F270FCE14007471DB /* Fastlane_Demo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF81F88270FCE3F007471DB /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF81F87270FCE3F007471DB /* Printer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		5EF81F75270FCE14007471DB /* Fastlane-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fastlane-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF81F7A270FCE14007471DB /* Fastlane_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane_DemoTests.swift; sourceTree = "<group>"; };
 		5EF81F7C270FCE14007471DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF81F87270FCE3F007471DB /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		5EF81F62270FCE13007471DB = {
 			isa = PBXGroup;
 			children = (
+				5EF81F86270FCE28007471DB /* Helper */,
 				5EF81F6E270FCE14007471DB /* Fastlane-Demo */,
 				5EF81F79270FCE14007471DB /* Fastlane-DemoTests */,
 				5EF81F6D270FCE14007471DB /* Products */,
@@ -84,6 +87,14 @@
 				5EF81F7C270FCE14007471DB /* Info.plist */,
 			);
 			path = "Fastlane-DemoTests";
+			sourceTree = "<group>";
+		};
+		5EF81F86270FCE28007471DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5EF81F87270FCE3F007471DB /* Printer.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				TargetAttributes = {
 					5EF81F6B270FCE14007471DB = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					5EF81F74270FCE14007471DB = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF81F88270FCE3F007471DB /* Printer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		5EF81F81270FCE14007471DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5KGVXR8S2Q;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "awsalex.com.Fastlane-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		5EF81F82270FCE14007471DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5KGVXR8S2Q;
@@ -389,6 +405,7 @@
 		5EF81F84270FCE14007471DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KGVXR8S2Q;
 				INFOPLIST_FILE = "Fastlane-DemoTests/Info.plist";
@@ -407,6 +424,7 @@
 		5EF81F85270FCE14007471DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KGVXR8S2Q;
 				INFOPLIST_FILE = "Fastlane-DemoTests/Info.plist";
